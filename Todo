@@ -1,0 +1,41 @@
+Perparation:
+    ✔ Write Todo list @lasted(5m19s)
+    ✔ Define Goal @done(20-06-26 13:47) @lasted(0h7min)
+    In an excel spreadsheet there is a single chart in on a table
+    The chart is created using coordinates included in the table.
+    There are 4 data series. The resulting plot is a rectangle where the points are scattered around the edges of the rectangle. Each series is scattered on one edge of the rectangle.
+
+    The macro shall visualize the distance between the points by adding measurement extension lines from each point on an edge to its adjacent points on the same edge. 
+
+    A second macro shall delete/hide the measurement extension lines from the chart.
+    ☐ Check Documentation @lasted(0h40min)
+        ☐ Exact position of a point in a chart
+       
+        Use
+        Tabelle1.ChartObjects(1).Chart. _
+ SeriesCollection(2).Points(2).Left / Top
+ To get the exact location (points) of all points within a series in relation to the chart area
+
+ Use similar syntax(top/left) to determine the exact location of the chart on the worksheet
+
+        ✔ Add an arrow @done(20-06-26 13:54)
+
+        ActiveSheet.Shapes.AddConnector(msoConnectorStraight, 370.5, 135, 374.25, _
+        225.75).Select
+        Selection.ShapeRange.Line.BeginArrowheadStyle = msoArrowheadTriangle
+        Selection.ShapeRange.Line.EndArrowheadStyle = msoArrowheadTriangle
+        ✔ Add an text box @done(20-06-26 14:10)
+        ActiveSheet.Shapes.AddTextbox(msoTextOrientationHorizontal, 654, 247.5, 42, _
+        17.25).Select
+    Selection.ShapeRange(1).TextFrame2.TextRange.Characters.Text = "eiofjhioefj" & Chr(13) & ""
+    ✔ Setup Repository @done(20-06-26 13:54)
+
+Coding:
+    ✔ Get an arrow to point to the a point on the chart @done(20-06-26 14:49)
+    ☐ Write a loop that iterates through each point in a series and draws the connectors between them
+    ☐ Add the text boxes
+    ☐ Add formating
+
+
+
+    
