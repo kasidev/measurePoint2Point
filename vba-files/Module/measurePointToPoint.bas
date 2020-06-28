@@ -85,10 +85,10 @@ For i_1= 2 to dblTotalSeries
         SeriesCollection(i_1).Points(i_2).Top
 
     'Get the x and y co-ordinate in points of the end point
-    dblXCorStart = dblXCorChart +  Tabelle1.ChartObjects(1).Chart. _
+    dblXCorEnd = dblXCorChart +  Tabelle1.ChartObjects(1).Chart. _
         SeriesCollection(i_1).Points(i_2+1).Left
 
-    dblYCorStart = dblYCorChart + Tabelle1.ChartObjects(1).Chart. _
+    dblYCorEnd = dblYCorChart + Tabelle1.ChartObjects(1).Chart. _
         SeriesCollection(i_1).Points(i_2+1).Top
 
     'decide on to which sides the arrow shall be shifted
@@ -119,9 +119,20 @@ For i_1= 2 to dblTotalSeries
         dblYshift= dblArrowShift
 
     End Select
+     Debug.Print Tabelle1.Shapes.Count
+    Debug.Print Tabelle1.ChartObjects(1).Chart. _
+        SeriesCollection(i_1).Points(i_2).MarkerForegroundColor
+    Tabelle1.Shapes.AddConnector _
+            Type:=msoConnectorStraight, _
+            BeginX:=dblXCorStart+dblXshift, BeginY:=dblYCorStart+dblYshift, _
+            EndX:=dblXCorEnd+dblXshift, EndY:=dblYCorEnd+dblYshift
+
+    Debug.Print Tabelle1.Shapes.Count
+
 
 
     Next i_2 
 Next i_1
 
 End Sub
+
