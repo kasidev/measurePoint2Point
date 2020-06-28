@@ -23,7 +23,7 @@ Dim dblXshift As Double
 Dim dblYshift As Double
 '
     Tabelle1.ChartObjects(1).Chart. _
-        SeriesCollection(2).Points(2).MarkerSize = 50
+        SeriesCollection(2).Points(2).MarkerSize = 5
     '
 
     dblLeftPoint = Tabelle1.ChartObjects(1).Chart. _

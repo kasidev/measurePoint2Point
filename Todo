@@ -8,8 +8,8 @@ Perparation:
     The macro shall visualize the distance between the points by adding measurement extension lines from each point on an edge to its adjacent points on the same edge. 
 
     A second macro shall delete/hide the measurement extension lines from the chart.
-    ☐ Check Documentation @lasted(0h40min)
-        ☐ Exact position of a point in a chart
+    ✔ Check Documentation @done(20-06-28 13:37)
+        ✔ Exact position of a point in a chart @done(20-06-28 13:37)
        
         Use
         Tabelle1.ChartObjects(1).Chart. _
@@ -24,7 +24,7 @@ Perparation:
         225.75).Select
         Selection.ShapeRange.Line.BeginArrowheadStyle = msoArrowheadTriangle
         Selection.ShapeRange.Line.EndArrowheadStyle = msoArrowheadTriangle
-        ✔ Add an text box @done(20-06-26 14:10)
+        ✔ Add an text box @done(20-06-28 13:37)
         ActiveSheet.Shapes.AddTextbox(msoTextOrientationHorizontal, 654, 247.5, 42, _
         17.25).Select
     Selection.ShapeRange(1).TextFrame2.TextRange.Characters.Text = "eiofjhioefj" & Chr(13) & ""
@@ -32,7 +32,7 @@ Perparation:
 
 Coding:
     ✔ Get an arrow to point to the a point on the chart @done(20-06-26 14:49)
-    ☐ Write a loop that iterates through each point in a series and draws the connectors between them
+    ✔ Write a loop that iterates through each point in a series and draws the connectors between them @done(20-06-28 13:20)
     ☐ Add the text boxes
     ☐ Add formating
 

@@ -22,7 +22,7 @@ Dim intLineColorB As Integer
 'Connector drawing loop
 
 'define arrow shift
-dblArrowShift=10
+dblArrowShift=20
 
 'get the x and y co-ordinates of the upperleft corner of the chart
 dblXCorChart =Tabelle1.ChartObjects(1).Chart. _
@@ -61,23 +61,23 @@ For i_1= 2 to dblTotalSeries
 
         'shift up
         Case 2
-        dblXshift= 0
+        dblXshift= 0+3
         dblYshift= -1*dblArrowShift
 
         'shift down
         Case 3
-        dblXshift= 0
+        dblXshift= 0+3
         dblYshift= 1*dblArrowShift
 
         'shift right
         Case 4
         dblXshift= -1* dblArrowShift
-        dblYshift= 0
+        dblYshift= 0+3
 
         'shift left
         Case 5
         dblXshift= 1* dblArrowShift
-        dblYshift= 0
+        dblYshift= 0+3
 
         Case Else
         dblXshift= dblArrowShift
@@ -96,8 +96,10 @@ For i_1= 2 to dblTotalSeries
         .EndArrowheadStyle = msoArrowheadOpen
         .BeginArrowheadStyle = msoArrowheadOpen
     End With
-    
+
 
     Next i_2 
 Next i_1
+
+Call addTextBox()
 End Sub
