@@ -1,5 +1,5 @@
 Public Sub addTextBox()
-'Declare all variables
+'Declare all variables test
 Dim dblLeftPoint As Double
 Dim dblTopPoint As Double
 Dim dblTextShiftHorizontal As Double
@@ -90,7 +90,7 @@ For i_1= 2 to dblTotalSeries
         Do While dblTextIndex=0
       
             If Tabelle1.Range("C" & i_3).Value = "Punkte Oben" Then
-                dblTextIndex=i_3+i_2
+                dblTextIndex=i_3+i_2-1
             Else
                 i_3=i_3+1
             End If
@@ -111,7 +111,7 @@ For i_1= 2 to dblTotalSeries
         Do While dblTextIndex=0
       
             If Tabelle1.Range("C" & i_3).Value = "Punkte Unten" Then
-                dblTextIndex=i_3+i_2
+                dblTextIndex=i_3+i_2-1
             Else
                 i_3=i_3+1
             End If
@@ -127,13 +127,13 @@ For i_1= 2 to dblTotalSeries
         dblXCorText= dblXCorStart-dblTextShiftHorizontal-3
         dblTextBoxwidth = 20
         dblTextBoxHeigt=40
-        dblYCorText=dblYCorStart-((dblYCorStart-dblYCorEnd)/2)-(dblTextBoxHeigt/2)
+        dblYCorText=dblYCorStart-((dblYCorStart-dblYCorEnd)/2)-(dblTextBoxHeigt/2)-3
 
         'Value for text box
         Do While dblTextIndex=0
       
             If Tabelle1.Range("C" & i_3).Value = "Punkte Links" Then
-                dblTextIndex=i_3+i_2
+                dblTextIndex=i_3+i_2-1
             Else
                 i_3=i_3+1
             End If
@@ -148,13 +148,13 @@ For i_1= 2 to dblTotalSeries
         i_3=1
         textOrientation=msoTextOrientationUpward
         dblXCorText= dblXCorStart+dblTextShiftHorizontal-dblTextBoxwidth
-        dblYCorText=dblYCorStart-((dblYCorStart-dblYCorEnd)/2)-(dblTextBoxHeigt/2)
+        dblYCorText=dblYCorStart-((dblYCorStart-dblYCorEnd)/2)-(dblTextBoxHeigt/2)-3
 
         'Value for text box
         Do While dblTextIndex=0
       
             If Tabelle1.Range("C" & i_3).Value = "Punkte Rechts" Then
-                dblTextIndex=i_3+i_2
+                dblTextIndex=i_3+i_2-1
             Else
                 i_3=i_3+1
             End If
